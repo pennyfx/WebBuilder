@@ -1,0 +1,6 @@
+[submodule "node_modules/shipyard"]
+	path = node_modules/shipyard
+	url = https://github.com/csuwldcat/Shipyard.git
+[submodule "node_modules/builder-lib"]
+	path = node_modules/builder-lib
+	url = git@github.com:pennyfx/WebBuilder-Lib.git
