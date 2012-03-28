@@ -1,0 +1,67 @@
+
+/*** Element Styles ***/
+
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	font-size: 0px;
+}
+
+body {
+	font-family: Segoe UI, Trebuchet MS, Helvetica, Arial;
+	background: /*url(../images/spinner-48.gif) no-repeat center center, */url(../images/spatter-background.png);
+}
+
+body > div:first-child  {
+	font-size: 14px;
+}
+
+nav a {
+	width: 22px;
+}
+
+
+/*** Builder-specific Styles ***/
+
+#builder-navigation {
+	height: 36px;
+	border-top: 1px solid #1D3143;
+	border-bottom: 1px solid #000;
+	background: -moz-linear-gradient(top, #475766, #2F4252);
+	box-shadow: 0 1px 3px -2px #000;
+}
+
+#builder-navigation-center-menu {
+	border: 1px solid;
+	border-top-color: rgba(0, 0, 0, 0.8);
+	border-left-color: rgba(0, 0, 0, 0.6);
+    border-right-color: rgba(0, 0, 0, 0.6);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+	background: -moz-linear-gradient(top, rgba(0,0,0, 0.35), rgba(20,20,20, 0.1));
+	border-radius: 24px;
+}
+
+#builder-navigation-center-menu a {
+	margin: 4px;
+	opacity: 0.60;
+}
+
+#builder-navigation-center-menu a:hover {
+	opacity: 0.80;
+}
+
+#builder-navigation-center-menu a:first-child {
+	margin: 0 4px 0 10px;
+}
+
+#builder-navigation-center-menu a:last-child {
+	margin: 0 10px 0 4px;
+}
+
+#builder-content > div.pagemanager-slidepanel div > div.sidepanel-wrap {
+	position: relative;
+	top: -15px;
+}

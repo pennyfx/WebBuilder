@@ -1,0 +1,17 @@
+{'version': '0.0',
+	'name': 'Web Builder',
+	'description': ('Add-on Builder makes it easy to write, build and '
+					'test Firefox extensions using common web '
+					'technologies.'),
+	#'icons': { },
+	#'widget': { },
+	'developer': {
+		'name': 'Mozilla Flightdeck Team',
+		'url': 'https://builder.mozilla.org/',
+	},
+	'installs_allowed_from': [		 
+		 'https://builder.mozilla.org',
+		 'https://builder.mozilla.org:1337',
+	],
+	'default_locale': 'en',
+}

@@ -80,4 +80,8 @@ app.get('/extensions/:id/:file', function(req,res){
 
 app.use(express.static(path.join(__dirname,'public')));
 
-app.listen(1337);
+var port = 1337;
+
+app.listen(port);
+
+console.log("express server listening on", port);
