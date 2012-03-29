@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<head>
+		<title>Web Builder</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"></meta>
+		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="chrome://global/skin/global.css" />
+		<link rel="stylesheet" type="text/css" href="chrome://browser/skin/devtools/common.css" />
+		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/reset.css"/>
+		<script type="text/javascript" data-main="/js/builder/" src="http://builder.mozilla.org:1337/js/shipyard/scripts/require.js"></script>
+	</head>
+
+	<body>
+		<xul:hbox style="width: 100%; height: 100%;" flex="1">
+		  <xul:groupbox flex="2">
+			<xul:tree id="tree1" flex="1" >
+			  <xul:treecols>
+			<xul:treecol id="sex1"   flex="1" label="Name" primary="true" />
+			<xul:treecol id="color1" flex="1" label="Color" />
+			<xul:treecol id="attr1"  flex="1" label="Attribute" />
+			  </xul:treecols>
+			  <xul:treechildren>
+			<xul:treeitem  container="true" open="true">
+			  <xul:treerow>
+				<xul:treecell label="Female" />
+			  </xul:treerow>
+			  <xul:treechildren>
+				<xul:treeitem>
+				  <xul:treerow>
+				<xul:treecell label="Pearl" />
+				<xul:treecell label="Gray" />
+					<xul:treecell label="Frumpy" />
+				  </xul:treerow>
+				</xul:treeitem>
+				<xul:treeitem>
+				  <xul:treerow>
+					<xul:treecell label="Cosmo" />
+					<xul:treecell label="White" />
+					<xul:treecell label="Round" />
+				  </xul:treerow>
+				</xul:treeitem>
+					<xul:treeitem>
+					 <xul:treerow>
+						<xul:treecell label="Tribble" />
+						<xul:treecell label="Orange" />
+						<xul:treecell label="Frumpy" />
+					 </xul:treerow>
+					</xul:treeitem>
+			  </xul:treechildren>
+			</xul:treeitem>
+			<xul:treeitem  container="true" open="true">
+			  <xul:treerow>
+				<xul:treecell label="Male" />
+			  </xul:treerow>
+			  <xul:treechildren>
+				<xul:treeitem>
+				  <xul:treerow>
+					<xul:treecell label="Aramis" />
+					<xul:treecell label="Black" />
+					<xul:treecell label="Cute" />
+				  </xul:treerow>
+				</xul:treeitem>
+				<xul:treeitem>
+				  <xul:treerow>
+					<xul:treecell label="Yakima" />
+					<xul:treecell label="Holstein" />
+					<xul:treecell label="Handsome" />
+				  </xul:treerow>
+				</xul:treeitem>
+				<xul:treeitem>
+				  <xul:treerow>
+				<xul:treecell label="Fergus" />
+				<xul:treecell label="Black" />
+					<xul:treecell label="Long" />
+				  </xul:treerow>
+				</xul:treeitem>
+				<xul:treeitem>
+				  <xul:treerow>
+				<xul:treecell label="Clint" />
+				<xul:treecell label="Black" />
+					<xul:treecell label="Young" />
+				  </xul:treerow>
+				</xul:treeitem>
+					<xul:treeitem>
+					 <xul:treerow>
+				  <xul:treecell label="Zippy" />
+				  <xul:treecell label="Orange" />
+				  <xul:treecell label="Playful" />
+					 </xul:treerow>
+					</xul:treeitem>
+					<xul:treeitem>
+					 <xul:treerow>
+				  <xul:treecell label="Feathers" />
+				  <xul:treecell label="Tabby" />
+				  <xul:treecell label="Patiarchal" />
+					 </xul:treerow>
+					</xul:treeitem>
+					<xul:treeitem>
+					 <xul:treerow>
+				  <xul:treecell label="Butter" />
+				  <xul:treecell label="Orange" />
+				  <xul:treecell label="Old" />
+					 </xul:treerow>
+					</xul:treeitem>
+			  </xul:treechildren>
+			</xul:treeitem>
+			  </xul:treechildren>
+			</xul:tree>
+		  </xul:groupbox>
+
+		  <xul:groupbox flex="1">
+			<xul:tree id="tree2" flex="1" hidecolumnpicker="true" >
+			  <xul:treecols>
+			<xul:treecol id="sex2"   flex="1" label="Cats" primary="true" />
+			  </xul:treecols>
+			  <xul:treechildren>
+
+			<xul:treeitem  container="true" open="true">
+			  <xul:treerow>
+				<xul:treecell label="Female" />
+			  </xul:treerow>
+			  <xul:treechildren>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="Gray" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Pearl" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="White" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Cosmo" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="Orange" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Tribble" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+			  </xul:treechildren>
+			</xul:treeitem>
+
+			<xul:treeitem  container="true" open="true">
+			  <xul:treerow>
+				<xul:treecell label="Male" />
+			  </xul:treerow>
+			  <xul:treechildren>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="Black" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Aramis" />
+					  </xul:treerow>
+					</xul:treeitem>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Fergus" />
+					  </xul:treerow>
+					</xul:treeitem>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Clint" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="Orange" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Butter" />
+					  </xul:treerow>
+					</xul:treeitem>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Zippy" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="Tabby" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Feathers" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+				<xul:treeitem container="true" open="true">
+				  <xul:treerow>
+				<xul:treecell label="Holstein" />
+				  </xul:treerow>
+				  <xul:treechildren>
+					<xul:treeitem>
+					  <xul:treerow>
+					<xul:treecell label="Yakima" />
+					  </xul:treerow>
+					</xul:treeitem>
+					  </xul:treechildren> 
+				</xul:treeitem>
+
+			  </xul:treechildren>
+			</xul:treeitem>
+			  </xul:treechildren>
+			</xul:tree>
+		  </xul:groupbox>
+		</xul:hbox>
+	
+	</body>
+</html>

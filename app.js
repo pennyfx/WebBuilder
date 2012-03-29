@@ -1,6 +1,7 @@
 var express = require('express'),
 	fs = require('fs'),
 	path = require('path'),
+	url = require('url'),
 	async = require('async'),
 	app = express.createServer();
 
@@ -77,6 +78,30 @@ app.get('/extensions/:id/:file', function(req,res){
 		res.send(data);
 	});
 });
+
+app.get('/js/shipyard*', function(req,res){
+	serveFile(req,res,'./node_modules/shipyard/', '/js/shipyard');	
+});
+
+app.get('/js/builder-lib*', function(req,res){
+	serveFile(req,res,'./node_modules/builder-lib/lib/builder-lib', '/js/builder-lib');
+});
+
+var serveFile = function(req, res, localPath, swapPath){
+	
+	var extPath = path.join(__dirname, localPath);
+	var file = path.join(extPath, url.parse(req.url).pathname.replace(swapPath,''));
+	fs.readFile(file, "utf-8", function(err, data){
+		if(err){
+			console.log("can't find", file);
+			res.send(404);
+		}else{
+			console.log("Found", req.url);
+			res.contentType('text/javascript');
+			res.send(data);
+		}
+	});
+}
 
 app.use(express.static(path.join(__dirname,'public')));
 

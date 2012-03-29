@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://browser/skin/devtools/common.css" type="text/css"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<head>
+		<title>Web Builder</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"></meta>
+		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/global.css"/>
+		<script type="text/javascript" data-main="http://builder.mozilla.org:1337/js/" src="http://builder.mozilla.org:1337/js/shipyard/scripts/require.js"></script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>
