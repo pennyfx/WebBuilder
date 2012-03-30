@@ -1,4 +1,4 @@
-var ElementControl = require('builder/element-control');
+var ElementControl = require('builder-lib/element-control');
 
 module.exports = {
 	

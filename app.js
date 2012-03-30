@@ -12,7 +12,7 @@ app.get('/', function(req, res){
     });
 });
 
-app.get('/extensions', function(req,res){
+/*app.get('/extensions', function(req,res){
 	var extPath = path.join(__dirname, './resources/extensions/');
 	var response = {};
 	console.log("extensions",extPath);
@@ -35,7 +35,6 @@ app.get('/extensions', function(req,res){
 			res.header('Content-Type','application/json');
 			res.send(response);
 		});
-		
 	});
 });
 
@@ -50,27 +49,75 @@ app.get('/controls/dom/*', function(req,res){
 	});
 
 });
+*/
 
+app.get('/controls*', function(req,res){
+	console.log("pathname is:", url.parse(req.url).pathname.split('/'));
+	if( url.parse(req.url).pathname.split('/').length == 2 ){
+		console.log("listing directories", req.url);
+		serveDirectories(req,res,'./resources/controls/');	
+	}else{		
+		console.log("serving controls", req.url);
+		var file = path.join(__dirname, "resources", url.parse(req.url).pathname);
+		fs.readFile(file, "utf-8", function(err, data){
+			if(err){
+				console.log("can't find", file);
+				res.send(404);
+			}else{
+				console.log("Found", req.url);
+				if(file.indexOf('.json')){
+					res.contentType('application/json');
+				}else{
+					res.contentType('text/javascript');
+				}
+				res.send(data);
+			}
+		});
+	}
+});
 
-app.get('/controls', function(req,res){
-	var extPath = path.join(__dirname, './resources/controls/dom');
+app.get('/project_types*', function(req,res){
+	serveDirectories(req, res,  './resources/project_types');	
+});
+
+app.get('/extensions', function(req,res){
+	serveDirectories(req, res, './resources/extensions');	
+});
+
+var serveDirectories = function( req, res, directory ) {
+	var extPath = path.join(__dirname, directory);
 	var response = {};
-	
+	console.log("serving -->", directory);
 	fs.readdir(extPath, function(err, dirs){
 		var tasks = [];
 		
 		dirs.forEach(function(item){
 			
-			var key = item.replace('.js','');
-			response[key] = { name: key, main: 'dom/' + item };
-			
+			var pj = path.join(extPath, item, 'package.json');
+			console.log("processing directory:",pj);
+			if( path.existsSync(pj) ){
+				var data = fs.readFileSync(pj,"utf-8");
+				console.log("processing package.json");
+				
+				try{
+					var d = JSON.parse(data);					
+					response[item] = d;
+				}catch(e){
+					console.log("error reading package.json", data);
+				}
+				
+				
+			}else{
+				response[item] = { name: item, main: item + ".js" };
+			}
 		});
 		
-		res.header('Content-Type','application/json');
+		res.header('Content-Type','application/json');		
 		res.send(response);
 		
 	});
-});
+
+}
 
 app.get('/extensions/:id/:file', function(req,res){
 	var extPath = path.join(__dirname, './resources/extensions/');
@@ -92,8 +139,7 @@ var serveFile = function(req, res, localPath, swapPath){
 	var extPath = path.join(__dirname, localPath);
 	var file = path.join(extPath, url.parse(req.url).pathname.replace(swapPath,''));
 	fs.readFile(file, "utf-8", function(err, data){
-		if(err){
-			console.log("can't find", file);
+		if(err){			
 			res.send(404);
 		}else{
 			console.log("Found", req.url);

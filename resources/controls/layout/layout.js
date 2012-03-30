@@ -1,4 +1,4 @@
-var ElementControl = require('builder/element-control'),
+var ElementControl = require('builder-lib/element-control'),
 	FlexBox = require('control/flex-box'),
 	Toolbar = require('control/toolbar'),
 	ToolbarItem = require('control/toolbar-item'),

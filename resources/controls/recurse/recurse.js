@@ -1,4 +1,4 @@
-var Control = require('builder/control');
+var Control = require('builder-lib/control');
 
 module.exports = {
 	Extends: Control,
