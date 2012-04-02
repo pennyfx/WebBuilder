@@ -1,3 +1,5 @@
 node_modules/express
 node_modules/async
 node_modules/.bin
+node_modules/wrench
+addon/web-builder-bootstrap/content
