@@ -5,7 +5,7 @@ module.exports = {
 	Extends: ElementControl,
 	
 	Whitelist: {
-		events: ['click', 'ping']
+		events: ['click']
 	},
 	
 	type: 'NavIcon',

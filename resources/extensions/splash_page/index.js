@@ -18,6 +18,11 @@ module.exports = {
 		
 		var settingsPage = new Page({
 			name: 'settings',
+			attributes: {
+				styles: {
+					background: 'red'
+				}
+			},
 			icon: {
 				attributes: {
 					styles: {
@@ -29,6 +34,11 @@ module.exports = {
 		
 		var editorPage = new Page({
 			name: 'editor',
+			attributes: {
+				styles: {
+					background: 'blue'
+				}
+			},
 			icon: {
 				attributes: {
 					styles: {
@@ -40,6 +50,11 @@ module.exports = {
 		
 		var testingPage = new Page({
 			name: 'testing',
+			attributes: {
+				styles: {
+					background: 'green'
+				}
+			},
 			icon: {
 				attributes: {
 					styles: {
@@ -51,6 +66,11 @@ module.exports = {
 		
 		var marketPage = new Page({
 			name: 'market',
+			attributes: {
+				styles: {
+					background: 'orange'
+				}
+			},
 			icon: {
 				attributes: {
 					styles: {
@@ -61,12 +81,15 @@ module.exports = {
 		});
 		
 		var pageNavigation = layout.navigationCenter.children[0];
-		console.log('pageNavigation', layout.navigationCenter, pageNavigation);
 		var pageManager = new PageManager(pageNavigation, layout.content, {
 			pages: [settingsPage, editorPage, testingPage, marketPage]
 		});
 		
 		root.append(layout);
+		
+		root.addEvent('click:relay(a)', function(){
+			console.log('root', this, arguments);
+		});
 	},
 	onUnload: function(){
 		//destroy window

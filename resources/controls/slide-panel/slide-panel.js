@@ -15,6 +15,7 @@ module.exports = {
 		panels: [],
 		flex: 1,
 		orient: 'vertical',
+		show: 0,
 		attributes: {
 			styles: {
 				position: 'relative',
@@ -41,6 +42,7 @@ module.exports = {
 		});
 		this.append(this.panels);
 		this.addPanels(this.options.panels);
+		if (this.panels.children[0] && this.options.show > -1) this.show(this.options.show);
 	},
 	
 	addPanel: function(control, options){
@@ -73,6 +75,12 @@ module.exports = {
 		this.panels.children.each(function(control){
 			control.element.setStyle(style, fraction);
 		});
+	},
+	
+	show: function(index){
+		if (this.index === index ) return this;
+		this.index = index;
+		this.panels.children[index];
 	},
 	
 	next: function(){

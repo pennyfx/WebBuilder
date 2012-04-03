@@ -5,7 +5,7 @@ var fs = require('fs'),
 	
 	
 var copy = [
-	{ to: 'js/', from: '../public/js' },
+	{ to: '/', from: '../public/' },	
 	{ to: 'js/shipyard', from: '../node_modules/shipyard' },
 	{ to: 'js/builder-lib', from: '../node_modules/builder-lib/lib/builder-lib' },
 	{ to: 'controls', from: '../resources/controls' },
