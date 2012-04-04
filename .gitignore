@@ -1,5 +1,7 @@
-node_modules/express
-node_modules/async
-node_modules/.bin
-node_modules/wrench
+node_modules/
+!node_modules/builder-lib
+!node_modules/shipyard
 addon/web-builder-bootstrap/content
+!addon/web-builder-bootstrap/content/js/index.js
+!addon/web-builder-bootstrap/content/index.xul
+

@@ -7,9 +7,9 @@
 	<head>
 		<title>Web Builder</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"></meta>
-		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/global.css"/>
-		<script type="text/javascript" data-main="http://builder.mozilla.org:1337/js/" src="http://builder.mozilla.org:1337/js/shipyard/scripts/require.js"></script>
+		<link rel="stylesheet" type="text/css" href="chome://builder/content/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="chome://builder/content/css/global.css"/>
+		<script type="text/javascript" data-main="chome://builder/content/js/" src="chrome://builder/content/js/shipyard/scripts/require.js"></script>
 	</head>
 
 	<body>
