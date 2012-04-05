@@ -6,6 +6,7 @@ var fs = require('fs'),
 	
 var copy = [
 	{ to: 'js/shipyard', from: '../node_modules/shipyard' },
+	{ to: 'js/async', from: '../node_modules/async/lib' },
 	{ to: 'js/builder-lib', from: '../node_modules/builder-lib/lib/builder-lib' },
 	{ to: 'controls', from: '../resources/controls' },
 	{ to: 'extensions', from: '../resources/extensions' },

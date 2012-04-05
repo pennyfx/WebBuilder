@@ -6,7 +6,7 @@ var express = require('express'),
 	app = express.createServer();
 
 app.get('/', function(req, res){
-    fs.readFile(path.join(__dirname, './addon/web-builder-bootstrap/content/index.xul'), 'utf8', function(err, text){
+    fs.readFile(path.join(__dirname, './public/index.xul'), 'utf8', function(err, text){
 		res.header('Content-Type', 'application/xhtml+xml');
         res.send(text);
     });
