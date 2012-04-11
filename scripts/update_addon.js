@@ -1,7 +1,7 @@
 var fs = require('fs'),
 	path = require('path'),
 	wrench = require('wrench'),
-	addonContentDir = '../addon/web-builder-bootstrap/content';
+	addonContentDir = '../addon-compiled/content';
 	
 	
 var copy = [

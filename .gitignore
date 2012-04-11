@@ -1,7 +1,7 @@
 node_modules/
 !node_modules/builder-lib
 !node_modules/shipyard
-addon/web-builder-bootstrap/content
-!addon/web-builder-bootstrap/content/js/index.js
-!addon/web-builder-bootstrap/content/index.xul
+addon-compiled/content
+!addon-compiled/content/js/index.js
+!addon-compiled/content/index.xul
 
