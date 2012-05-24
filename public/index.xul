@@ -9,7 +9,8 @@
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"></meta>
 		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="http://builder.mozilla.org:1337/css/global.css"/>
-		<script type="text/javascript" data-main="http://builder.mozilla.org:1337/js/" src="http://builder.mozilla.org:1337/js/shipyard/scripts/require.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js" ></script>
+		<script type="text/javascript" data-main="http://builder.mozilla.org:1337/js/" src="http://builder.mozilla.org:1337/js/require.js"></script>
 	</head>
 
 	<body>

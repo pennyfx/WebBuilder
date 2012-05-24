@@ -9,10 +9,10 @@ module.exports = {
 	Accessors: {
 		text: {
 			get: function(){				
-				return this.element.node.textContent;
+				return this.element.textContent;
 			},
 			set: function(val){				
-				this.element.node.textContent = val;				
+				this.element.textContent = val;				
 				return this;
 			}
 		}

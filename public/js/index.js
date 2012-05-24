@@ -2,10 +2,6 @@ require.paths.unshift("http://builder.mozilla.org:1337/js/builder-lib");
 
 require('builder-lib/types/Natives').install();
 
-var k = Array.combine([],[],[]);
-
-Class = require('shipyard/class/Class');
-
 var App = require('builder-lib/application'),
 	Root = new Class(require('./controls/root_dom/index.js'));
 
@@ -37,8 +33,3 @@ var app = new App({
 		this.addonInstalled = !!this.addon;
 	}
 });
-
-
-//app.loadProjectType('default');
-
-//module.exports = app;

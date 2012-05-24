@@ -1,11 +1,7 @@
 var express = require('express'),
 	app = express.createServer();
 
-try{
 require('./routes/')(app);
-}catch(e){
-	console.log("sdf");
-}
 
 var port = 1337;
 
